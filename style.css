@@ -120,6 +120,7 @@ h1 {
     text-transform: uppercase;
     margin-top: 16px;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 .sessions-card p {
@@ -138,7 +139,7 @@ h1 {
 .description {
     line-height: 32px;
     margin: 15px 0 32px 0;
-    font-size: 700;
+    font-weight: 500;
 }
 
 .slider {
@@ -217,7 +218,7 @@ h1 {
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translatey(-8px);
 }
 
 .card .top-section {
@@ -266,4 +267,35 @@ h1 {
     left: 0;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+    .card {
+        width: 100%;
+    }
+    .card-wrapper {
+        flex-wrap: wrap-reverse;
+    }
+    .sessions-card {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        padding: 16px;
+    }
+    h1 {
+        margin: 0 0 20px 0;
+    }
+    .container {
+        padding: 0 20px;
+    }
+    .sessions-card {
+        width: 100%;
+    }
+    .toggle-wrapper {
+        width: 90%;
+        justify-content: space-around;
+    }
 }
